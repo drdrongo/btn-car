@@ -1,0 +1,95 @@
+/* Your button CSS file */
+.btn-yours {
+  top: 145;
+  position: absolute;
+  background-color: #fff6fb;
+  color: #fc5bb6;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+  padding: 15px 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.btn-yours:hover {
+  background-color: #ffeffa;
+}
+.btn-yours:active {
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+}
+
+.car {
+  width: 30px;
+  left: 0px;
+  z-index: -1;
+  position: relative;
+  transform: scaleX(-1);
+
+  transition-property: left, transform;
+  transition-duration: 1s, 0s;
+}
+.btn-yours:hover + .car {
+  left: 100px;
+  transform: scaleX(1);
+  transition-property: left, transform;
+  transition-duration: 1s, 0s;
+}
+.btn-yours:focus + .car {
+  left: 90%;
+  transform: scaleX(1);
+  transition-property: left, transform;
+  transition-duration: 3s, 0s;
+}
+
+/*In case you want to try make the car shake / add walking motion to animals:*/
+
+/*
+.btn-yours:hover + .car {
+  left: 100px;
+  transform: scaleX(1);
+  transition-property: left, transform;
+  transition-duration: 1s, 0s;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.btn-yours:focus + .car {
+  left: 700px;
+  transform: scaleX(1);
+  transition-property: left, transform;
+  transition-duration: 2s, 0s;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}*/
+
+/*
+@keyframes shake {
+  0% { transform: translate(0px, 1px) rotate(5deg); }
+  10% { transform: translate(0px, 0px) rotate(-5deg); }
+  20% { transform: translate(0px, 1px) rotate(5deg); }
+  30% { transform: translate(0px, 0px) rotate(-5deg); }
+  40% { transform: translate(0px, 1px) rotate(5deg); }
+  50% { transform: translate(0px, 0px) rotate(-5deg); }
+  60% { transform: translate(0px, 1px) rotate(5deg); }
+  70% { transform: translate(0px, 0px) rotate(-5deg); }
+  80% { transform: translate(0px, 1px) rotate(5deg); }
+  90% { transform: translate(0px, 0px) rotate(-5deg); }
+  100% { transform: translate(0px, 1px) rotate(5deg); }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
