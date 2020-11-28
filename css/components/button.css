@@ -1,4 +1,4 @@
-/* Your button CSS file */
+/* Car Button related css */
 .btn-yours {
   top: 145;
   position: absolute;
@@ -17,33 +17,32 @@
   box-shadow: 1px 1px 5px rgba(0,0,0,.1);
 }
 
+ /* car has to be flipped horizontally so that when the button isnt hovered/clicked, it drives back to the button to the left. */
 .car {
   width: 30px;
   left: 0px;
-  z-index: -1;
+  z-index: -1; /* sends car behind button */
   position: relative;
-  transform: scaleX(-1);
+  transform: scaleX(-1); /* flips the car horizontally */
 
-  transition-property: left, transform;
-  transition-duration: 1s, 0s;
+  transition-property: left, transform; /* pairs with transition duration */
+  transition-duration: 1s, 0s; /* 1second transition for left transform, 0s transition for scaleX transform */
 }
-.btn-yours:hover + .car {
+.btn-yours:hover + .car { /* hover the button to affect the car */
   left: 100px;
-  transform: scaleX(1);
+  transform: scaleX(1); /* flips car the correct direction when its driving */
   transition-property: left, transform;
   transition-duration: 1s, 0s;
 }
-.btn-yours:focus + .car {
-  left: 90%;
+.btn-yours:focus + .car { /* click the button to affect the car. */
+  left: 90%; /* sends car further away */
   transform: scaleX(1);
   transition-property: left, transform;
   transition-duration: 3s, 0s;
 }
 
-/*In case you want to try make the car shake / add walking motion to animals:*/
-
-
-.btn-yours:hover + .car {
+/*In case you want to try make the car shake / or add walking motion to animals:*/
+/* .btn-yours:hover + .car {
   left: 100px;
   transform: scaleX(1);
   transition-property: left, transform;
@@ -73,60 +72,47 @@
   80% { transform: translate(0px, 1px) rotate(2deg); }
   90% { transform: translate(0px, 0px) rotate(-2deg); }
   100% { transform: translate(0px, 1px) rotate(2deg); }
-}
+} */
 
-
-
-
-
-
-
+/* Freaky-button related css */
 .hayato {
-  padding: 16px 8px;
   background-color: lightblue;
   border-radius: 16px;
   font-size: 1.5em;
   font-weight: bold;
   border: 2px solid lightgrey;
-  cursor: pointer;
+  cursor: pointer; /* changes cursor to nice pointer for links */
   color: white;
-  overflow: hidden;
+  
   width: 180px;
   height: 120px;
-  object-fit: cover;
-  object-position: 50% 50%;
-  opacity: 1;
-  margin: 0 auto;
+  margin: 0 auto; /* centers itself horizontally in container */
   padding: 0;
-  display: flex;
+
+  overflow: hidden; /* (essential) Hides anything that overflows outside of width/height of container */
+
+  display: flex; /* flex centering to get image to sit in center of button */
   align-items: center;
   justify-content: center;
-  transition: all 1s;
-  position: relative;
+  position: relative; /* allows for position: absolute */
 }
-/* .hayato span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-} */
 
 .hayato:hover {
-  background-color: none;
+  background-color: none; /* removes the background on button hover */
 }
 
 .hayato img {
-  position: absolute;
+  position: absolute; /* centers it */
   width: 100%;
   height: auto;
-  object-position: center;
-  opacity: 0;
-  transition: all 1s;
+  opacity: 0; /* by default is hidden. */
 }
-.hayato:hover img {
-  opacity: 1;
+.hayato:hover img { /* on button hover, the image is affected */
+  opacity: 1; /* becomes visible */
   width: 150%;
-  transition: all 1s;
-  animation: shake 0.5s;
+
+  transition: all 1s ease-in-out; /* adds transition time of 1 second to everything img-related */
+  animation: shake 0.3s; /* adds a custom-made animation to the image */
   animation-iteration-count: infinite;
 }
 
