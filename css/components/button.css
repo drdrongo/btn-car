@@ -42,7 +42,7 @@
 
 /*In case you want to try make the car shake / add walking motion to animals:*/
 
-/*
+
 .btn-yours:hover + .car {
   left: 100px;
   transform: scaleX(1);
@@ -59,28 +59,76 @@
   transition-duration: 2s, 0s;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
-}*/
-
-/*
-@keyframes shake {
-  0% { transform: translate(0px, 1px) rotate(5deg); }
-  10% { transform: translate(0px, 0px) rotate(-5deg); }
-  20% { transform: translate(0px, 1px) rotate(5deg); }
-  30% { transform: translate(0px, 0px) rotate(-5deg); }
-  40% { transform: translate(0px, 1px) rotate(5deg); }
-  50% { transform: translate(0px, 0px) rotate(-5deg); }
-  60% { transform: translate(0px, 1px) rotate(5deg); }
-  70% { transform: translate(0px, 0px) rotate(-5deg); }
-  80% { transform: translate(0px, 1px) rotate(5deg); }
-  90% { transform: translate(0px, 0px) rotate(-5deg); }
-  100% { transform: translate(0px, 1px) rotate(5deg); }
 }
-*/
+
+@keyframes shake {
+  0% { transform: translate(0px, 1px) rotate(2deg); }
+  10% { transform: translate(0px, 0px) rotate(-2deg); }
+  20% { transform: translate(0px, 1px) rotate(2deg); }
+  30% { transform: translate(0px, 0px) rotate(-2deg); }
+  40% { transform: translate(0px, 1px) rotate(2deg); }
+  50% { transform: translate(0px, 0px) rotate(-2deg); }
+  60% { transform: translate(0px, 1px) rotate(2deg); }
+  70% { transform: translate(0px, 0px) rotate(-2deg); }
+  80% { transform: translate(0px, 1px) rotate(2deg); }
+  90% { transform: translate(0px, 0px) rotate(-2deg); }
+  100% { transform: translate(0px, 1px) rotate(2deg); }
+}
 
 
 
 
 
+
+
+.hayato {
+  padding: 16px 8px;
+  background-color: lightblue;
+  border-radius: 16px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: 2px solid lightgrey;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  opacity: 1;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+}
+/* .hayato span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+} */
+
+.hayato:hover {
+  background-color: none;
+}
+
+.hayato img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-position: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.hayato:hover img {
+  opacity: 1;
+  width: 150%;
+  transition: all 1s;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
 
 
 
