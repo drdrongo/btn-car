@@ -1,7 +1,8 @@
 /* Car Button related css */
 .btn-yours {
-  top: 145;
   position: absolute;
+  top: 145;
+  left: 46%;
   background-color: #fff6fb;
   color: #fc5bb6;
   border-radius: 10px;
@@ -59,8 +60,9 @@
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
+*/
 
-@keyframes shake {
+@keyframes shake { /* shake animation */
   0% { transform: translate(0px, 1px) rotate(2deg); }
   10% { transform: translate(0px, 0px) rotate(-2deg); }
   20% { transform: translate(0px, 1px) rotate(2deg); }
@@ -72,7 +74,7 @@
   80% { transform: translate(0px, 1px) rotate(2deg); }
   90% { transform: translate(0px, 0px) rotate(-2deg); }
   100% { transform: translate(0px, 1px) rotate(2deg); }
-} */
+}
 
 /* Freaky-button related css */
 .hayato {
